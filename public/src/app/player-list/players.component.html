@@ -1,0 +1,12 @@
+<p>Players List Component</p>
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Position</td>
+    </tr>
+    <tr *ngFor="let player of players">
+        <td>{{ player.name }}</td>
+        <td>{{ player.position }}</td>
+        <td><button (click)="destroy(player._id)">Delete</button></td>
+    </tr>
+</table>

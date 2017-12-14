@@ -1,0 +1,23 @@
+<p>Player New Component</p>
+
+<form #playerForm="ngForm" (submit)="onSubmit()" method="post">
+    <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        [(ngModel)]="player.name"
+        required
+
+        >
+    <input
+        type="text"
+        name="position"
+        placeholder="Position"
+        [(ngModel)]="player.position"
+        required
+
+        >
+    <input type="submit" value="Add Player" [disabled]="!playerForm.form.valid">
+</form>
+
+{{ player | json }}
